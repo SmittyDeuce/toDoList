@@ -7,3 +7,9 @@ start date 02/14/24
 2) Mark tasks as completed
 3) delete tasks
 4) view current tasks
+
+
+2/18/24
+added inputs for asking for errands as well as for "anything else" createad an
+if statement for initial chore and nested inside a while loop stating that while
+anything else != '' continue to ask.. all that works fine but my current else "why are you here go enjoy your day" prints regardless if the list that I created called toDo is empty or not when, I want it to only print if toDo is empty.
