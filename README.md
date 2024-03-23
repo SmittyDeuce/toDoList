@@ -73,3 +73,8 @@ turns out coding temple is having me do a to do list project so i will scrap my 
     1. Create a GitHub repository for your project.
     2. Commit your code to the repository regularly.
     3. Include a link to your GitHub repository in your project documentation.
+
+
+
+I imported tabulate because i wanted the ""gui"" to be in the a table format
+had some trouble initialy because the table would print but each word had its own column. In order to fix it i had to iterate though my "menu" list but had to make each element its own list ['option'] => ['add a task] which gave me what i was looking for. 
