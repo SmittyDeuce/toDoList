@@ -8,19 +8,28 @@ def toDoList():
     print(tabulate([[option] for option in menu], headers=["Menu"], tablefmt="pipe"))
     
 while True:
+    tasks = []
     try:
         menuOption = int(input("Please choose a menu option: "))
         if menuOption == 5:
             print("Thank you for using our app!")
             break
+
         elif menuOption == 1:
             print("Add a task")
-            addTask = input("What task would you like to add?: ")
+            while True:
+                addTask = input("What task would you like to add?: ('done' when finshed) ")
+                addTask = addTask.lower()
+                if addTask == 'done':
+                    break
+                else:
+                    tasks.append(addTask)
+                    
         else:
             pass
     except ValueError:
         print("Please enter a number 1-5 ")
-        continue  # This will continue the loop, prompting the user again
+        continue  
 
 
 toDoList()
