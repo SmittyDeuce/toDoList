@@ -86,3 +86,4 @@ started off trying to get my value error exception to work I was forgetting my e
     added nested while true to take into the account if user wants to keep adding a task, only to exit once they enter 'done' which will send them back to menu.
 rearranged the code to display the menu option table each time the user goes back into the main screen at first it was just show on init call of func.
     was able to do option 2: view tasks, I created an input that gives user to exit when typing 'done' and only done. 
+ValueError exception stopped working will need to fix that turned task from list into a dictonary to add incomplete and complete as keys so i can work my way towards filtering by that as well as marking tasks as complete
