@@ -84,4 +84,5 @@ had some trouble initialy because the table would print but each word had its ow
 
 started off trying to get my value error exception to work I was forgetting my else: statement inside my try block which was giving me the issue. now I will work on filling how other errors as well as, Option one which is 'add a task'
     added nested while true to take into the account if user wants to keep adding a task, only to exit once they enter 'done' which will send them back to menu.
-rearrange the code to display the menu option table each time the user goes back into the main screen at first it was just show on init call of func
+rearranged the code to display the menu option table each time the user goes back into the main screen at first it was just show on init call of func.
+    was able to do option 2: view tasks, I created an input that gives user to exit when typing 'done' and only done. 

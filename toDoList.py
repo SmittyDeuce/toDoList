@@ -4,10 +4,10 @@ def toDoList():
 #  from here down it handles the init app greeting, and user interface
 # displaying the differnt options availale.
       
+    tasks = []
     while True:
         menu = ["1) add a task", "2) view tasks", "3) mark a task as complete",
             '4) delete a task', '5) quit']
-        tasks = []
     
 
         print("Welcome to The To-Do List App!")
@@ -19,7 +19,7 @@ def toDoList():
             if menuOption == 5:
                 print("Thank you for using our app!")
                 break
-# from here down it handles menu option 1
+# from here down it handles menu option 1:
             elif menuOption == 1:
                 print("Add a task")
                 while True:
@@ -29,6 +29,21 @@ def toDoList():
                         break
                     else:
                         tasks.append(addTask)
+# from here down is menu option 2:
+            elif menuOption == 2:
+                print("Current Tasks")
+                print(tasks)
+                while True:
+                        finishedViewing = input("enter 'done when finished ")
+                        finishedViewing = finishedViewing.lower()
+                        if finishedViewing == 'done':
+                            break
+                        else:
+                            print("please enter 'done' when finished")
+                            continue
+
+            
+
 
             else:
                 pass
