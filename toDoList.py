@@ -10,7 +10,8 @@ def toDoList():
             '4) delete a task', '5) quit']
     
 
-        print("Welcome to The To-Do List App!")
+        print("Welcome to The To-Do List App!\n", "")
+
         menuTable = tabulate([[option] for option in menu], headers=["Menu"], tablefmt="pipe")
         print(menuTable)
         menuOption = input("Please choose a menu option: ")
@@ -46,11 +47,26 @@ def toDoList():
                             print("please enter 'done' when finished")
                             continue
 #  from here down handles menu option 3
-            
+            elif menuOption == 3:
+                print("Mark Task as Complete")
+                while True:
+                    completedTask = input("What tasks have been completed: (enter 'done' when finished) ")
+                    completedTask = completedTask.lower().strip()
+                    if completedTask == 'done':
+                        break
+                    else:
+                        taskFound = False
+                        for status, task in tasks.items():
+                            if completedTask in task:
+                                tasks["complete"].append(completedTask)
+                                tasks["incomplete"].remove(completedTask)
+                                taskFound = True
+                                print("Task marked completed\n",  tasks['complete'])
+                                break
+                        if not taskFound:
+                            print("Error: Task Not Found")
+                    
 
-
-            else:
-                pass
         except ValueError:
             print("Please enter a number 1-5 ")
             continue  
