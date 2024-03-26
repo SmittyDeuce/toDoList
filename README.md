@@ -87,3 +87,8 @@ started off trying to get my value error exception to work I was forgetting my e
 rearranged the code to display the menu option table each time the user goes back into the main screen at first it was just show on init call of func.
     was able to do option 2: view tasks, I created an input that gives user to exit when typing 'done' and only done. 
 ValueError exception stopped working will need to fix that turned task from list into a dictonary to add incomplete and complete as keys so i can work my way towards filtering by that as well as marking tasks as complete
+
+
+3/25/24
+
+eception was not broke i was just over looking it, also was able to do menu option 3 as well as, finish up option 4 'delete a task" and my final else statement that accounts for anthying outside of value error and int 1-5

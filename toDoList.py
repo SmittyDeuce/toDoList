@@ -66,6 +66,27 @@ def toDoList():
                         if not taskFound:
                             print("Error: Task Not Found")
                     
+            elif menuOption == 4:
+                print("Delete a task\n")
+                while True:
+                    deleteTask = input("what task do you want to delete?: 'done' when finished ")
+                    deleteTask = deleteTask.lower().strip()
+
+                    if deleteTask == 'done':
+                        break
+                    
+                    taskFound = False
+                    for status, task in tasks.items():
+                        if deleteTask in task:
+                            tasks["complete"].remove(deleteTask)
+                            tasks["incomplete"].remove(deleteTask)
+                            taskFound = True
+                            print("task deleted", tasks)
+                            break
+                    if not taskFound:
+                        print("Error: task never existed")
+            else:
+                print("Invalid Response, please try again")
 
         except ValueError:
             print("Please enter a number 1-5 ")
